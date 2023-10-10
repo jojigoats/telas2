@@ -1,0 +1,112 @@
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #30A5EA;
+        }
+
+        .header {
+            background-color: #30A5EA;
+            height: 15vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+
+.points-box p {
+    font-size: 16px; /* Tamanho da fonte desejado */
+    margin: 0;
+    color: white;
+}
+
+        #menu-h{
+    padding: 0;
+    background-color: #ffffff ;
+    border-radius: 50px;
+    text-align: center;
+    height: 40rem;
+     
+}
+
+#menu-h li{
+    display: inline;
+}
+
+#menu-h li a {
+    
+    color: black;
+    text-decoration:none;
+    display: inline-block;
+    padding: 10px;
+    font-family: Open Sans;
+    transition: 0.8s;
+    
+}
+
+#menu-h a:hover{
+    background-color: rgba(99, 198, 251, 0.443);
+    border-radius: 25px;
+    transition: 0.5s;
+
+}
+        .prizes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .prize {
+            width: calc(48% - 10px); /* 2 imagens em uma linha com espaçamento de 10px entre elas */
+            margin-bottom: 20px;
+            background-color: #EEEFE9;
+            border-radius: 15px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+            overflow: hidden;
+        }
+
+        .prize img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px 15px 0 0; /* Arredonda apenas as bordas superiores */
+        }
+
+        .prize-description {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #30A5EA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+ 
+}
+
+.footer-button {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+
+.footer-button:hover {
+    background-color: #056BB3;
+}

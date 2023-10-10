@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="loader.js" defer></script>
+    <title>Ajudato</title>
+</head>
+<body>
+
+<!--imagem ajudato-->
+<img class="ajudato" alt="ajudato" src="img/logooo.png">
+
+<!--barra de pesquisa-->
+<div class="search-box">
+    <input type="text" class="search-txt" placeholder="Pesquisar">
+    <a href="Pesquisa.html" class="search-bnt">
+        <img alt="lupa" src="img/lupa.svg"/>
+    </a>
+</div>
+
+<!--começo menu-->
+<ul id="menu-h">
+    <li><a href="menu.html"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+
+    <h1 class="Title-carrosel">Nome das Ong</h1>
+
+ <!--começo carrossel-->
+    <div>
+        <div class="carrossel">
+            <img src="img/3.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="buttons">
+            <button onclick="retroceder()">Voltar</button>
+            <button onclick="avanca()">Avançar</button>
+        </div>
+    </div>
+    
+    
+
+    <button class="button"><a href="doar.html" >Doe aqui!</a></button>
+    </div>
+    <div class="Title"><p><h1>Sobre a Ongs</h1></p></div>
+
+    <div class="Title-descrição"><p>Lorem ipsum dolor sit amet. Non Quis cumque sit molestias quia sit aliquid voluptate et excepturi itaque eum omnis quam et quis soluta. Aut consequatur perspiciatis ut exercitationem neque et eaque alias. Et ipsum doloremque in soluta officia rem nisi tempore eos saepe laudantium vel minima numquam. Ex facilis internos in dolores fugiat qui voluptatem cumque.
+<br>
+<br>
+Non voluptates natus et autem quisquam et incidunt illo vel consectetur quia! Est magnam galisum aut architecto alias aut iusto repudiandae.
+<br>
+Sed rerum tenetur quo quia tenetur rem placeat tempore qui praesentium laboriosam et sunt impedit sit quidem blanditiis eos dolores placeat. Et iure fugiat et optio minima non distinctio fugiat ut voluptates quia eos dolores quia qui aspernatur corporis. Rem omnis quia aut quasi nobis aut soluta recusandae.</p></div>
+
+</ul>
+
+
+<script src="/js/loader.js" defer></script>
+<script>
+  /* carrossel começa do 0 */
+let posit = -1;
+
+const avanca = () =>{
+    /* pega todas as imagens e guarda em um array */
+    let imagens = document.querySelectorAll(".carrossel img");
+    /* se tiver uma imagem do lado ele aumenta a variavel posit */
+    posit + 2 > imagens.length ? posit = 0 : posit++;
+    /* altera a posição de todos os elementos */
+    for(let i = 0; i < imagens.length; i++){
+        imagens[i].style.left = `-${posit}00%`;
+    }
+
+}
+
+const retroceder = () =>{
+    /* pega todas as imagens e guarda em um array */
+    let imagens = document.querySelectorAll(".carrossel img");
+    /* se tiver uma imagem do lado ele diminui a variavel posit */
+    1 > posit ? posit = imagens.length - 1 : posit--;
+    /* altera a posição de todos os elementos */
+    for(let i = 0; i < imagens.length; i++){
+        imagens[i].style.left = `-${posit}00%`;
+    }
+}
+
+avanca();
+</script>
+</body>
+</html>
